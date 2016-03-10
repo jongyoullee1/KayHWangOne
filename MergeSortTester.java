@@ -61,7 +61,7 @@ public class MergeSortTester
 	    Tester.mess(a);
 	}
 	long avg = total / (long)5.0;
-	//For some reason, the first test we do is fudged up by something we haven't yet figured out. This boolean check lets us disregard the first test
+	//For some reason, the first test we do is fudged up by something we haven't yet figured out. This boolean check lets us disregard the first test to avoid the problem :).
 	if (first){
 	}
 	else{
@@ -88,6 +88,26 @@ public class MergeSortTester
 	getTime(Test1000000,false);
 	int[] Test10000000 = GenArr(10000000,100);
 	getTime(Test10000000,false);
+	int[] Test2 = GenArr(2,100);
+	getTime(Test2,false);
+	int[] Test4 = GenArr(4,100);
+	getTime(Test4,false);
+	int[] Test8 = GenArr(8,100);
+	getTime(Test8,false);
+	int[] Test16 = GenArr(16,100);
+	getTime(Test16,false);
+	int[] Test32 = GenArr(32,100);
+	getTime(Test32,false);
+	int[] Test64 = GenArr(64,100);
+	getTime(Test64,false);
+	int[] Test128 = GenArr(128,100);
+	getTime(Test128,false);
+	int[] Test256 = GenArr(256,100);
+	getTime(Test256,false);
+	int[] Test512 = GenArr(512,100);
+	getTime(Test512,false);
+	int[] Test1024 = GenArr(1024,100);
+	getTime(Test1024,false);
 
 
     }//end main
