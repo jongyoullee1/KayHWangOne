@@ -9,11 +9,11 @@
   O(nlog(n))
   Mean execution times for dataset of size n:
   Batch size: 5
-  n=1       time: 1438675nanoseconds
-  n=10      time: 2164602nanoseconds
-  n=100     time: 3943333nanoseconds
+  n=1       time: 1438675 nanoseconds
+  n=10      time: 2164602 nanoseconds
+  n=100     time: 3943333 nanoseconds
   ...
-  n=1,000,000  time: 3536034947nanoseconds
+  n=1,000,000  time: 3536034947 nanoseconds
   ANALYSIS:
   The increase in times between the small cases of n and the really large case of n was reasonable.
   1000000=10000*100. If this algorithm ran in n^n time, the runtime for n=1000000 would be 10000 times
@@ -43,26 +43,51 @@ public class MergeSortTester
     //Helper method for displaying an array
     //Credit goes to Mr.Brown's skeleton file
     public static void printArray( int[] a ) {
-  System.out.print("[");
-  for( int i : a )
-      System.out.print( i + ",");
-  System.out.println("]");
+	System.out.print("[");
+	for( int i : a )
+	    System.out.print( i + ",");
+	System.out.println("]");
     }
-  
-
     
-    public static void main( String[] args ) 
-    {
-  //This is just the Test for the Generator, this is the basis for the rest of the tests!
-  long startTime = System.nanoTime();   
-  int[] genTest = GenArr(1000000,100);
-  printArray(genTest);
-  MergeSort Tester = new MergeSort();
-  printArray(Tester.sort(genTest));
-  long stopTime = System.nanoTime();
-  long elapsedTime = stopTime - startTime;
-  System.out.println(elapsedTime);
-  
+    public static void getTime(int[] a, boolean first){
+	long total = (long)0;
+	for(int x = 0; x < 5; x++){
+	    long startTime = System.nanoTime();  
+	    MergeSort Tester = new MergeSort();
+	    Tester.sort(a);
+	    long stopTime = System.nanoTime();
+	    long elapsedTime = stopTime - startTime;
+	    total = total + elapsedTime;
+	    Tester.mess(a);
+	}
+	long avg = total / (long)5.0;
+	if (first){
+	}
+	else{
+	    System.out.println( avg  + " nanoseconds taken for an array of length: " + a.length);
+	}
+    }
+    
+    public static void main( String[] args ) {
+	int[] Test10B = GenArr(1,100);
+	getTime(Test10B,true);
+	int[] Test1 = GenArr(1,100);
+	getTime(Test1,false);
+	int[] Test10 = GenArr(10,100);
+	getTime(Test10,false);
+	int[] Test100 = GenArr(100,100);	
+	getTime(Test100,false);
+	int[] Test1000 = GenArr(1000,100);
+	getTime(Test1000,false);
+	int[] Test10000 = GenArr(10000,100);
+	getTime(Test10000,false);
+	int[] Test100000 = GenArr(100000,100);
+	getTime(Test100000,false);
+	int[] Test1000000 = GenArr(1000000,100);
+	getTime(Test1000000,false);
+	int[] Test10000000 = GenArr(10000000,100);
+	getTime(Test10000000,false);
+
 
     }//end main
 
