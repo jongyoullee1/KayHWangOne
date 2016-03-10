@@ -1,15 +1,20 @@
 /*======================================
-Shaik Abiden
+Shaik Abiden, Sebastian Dittgen
 APCS2 pd9
-HW09 -- Mergers and Acquisitions. . .
-2016-03-06
+HW11 -- Wrapping It Up
+2016-03-10
 
   class MergeSort
   Implements mergesort on array of ints.
 
   Summary of Algorithm: 
 
-  Similar to how we did so in class, I'd solve the shuffled deck problem recursively by breaking down the work into halves. The code would have a base case of one card, which, when you do have one card left, you return that card back up. Once this is done, the initial function call recieves the two single cards and sorts them by comparing the first card and returns its pile back up. When the function recieves large halves to compare, it would do so by comparing the first two cards of each pile, putting them aside, and moving on until you have none left or one stack left, in which case you just pile the stack on. If this is done so correctly, the deck should become sorted through a assembly line sort of way.
+  Similar to how we did so in class, I'd solve the shuffled deck problem recursively by breaking down the work into halves.
+  The code would have a base case of one card, which, when you do have one card left, you return that card back up.
+  Once this is done, the initial function call recieves the two single cards and sorts them by comparing the first card and
+  returns its pile back up. When the function recieves large halves to compare, it would do so by comparing the first two cards
+  of each pile, putting them aside, and moving on until you have none left or one stack left, in which case you just pile the stack on.
+  If this is done so correctly, the deck should become sorted through a assembly line sort of way.
 
 
   ======================================*/
