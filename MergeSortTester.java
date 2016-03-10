@@ -1,13 +1,16 @@
 /*======================================
   class MergeSortTester
   ALGORITHM:
-  <INSERT YOUR DISTILLATION OF ALGO HERE>
+  We divide the given array in two halves, and recursively run the sort function on those sub-arrays.
+  These sub-arrays recursively get divided until they reach a length one, at which point they are merged together.
+  In merging, the elements are sorted into correct ascending order. These smaller units continue to merge with their
+  counterparts until finally the two halves are merged, in sorted order.
   BIG-OH CLASSIFICATION OF ALGORITHM:
-  <INSERT YOUR EXECUTION TIME CATEGORIZATION OF MERGESORT HERE>
+  O(nlog(n))
   Mean execution times for dataset of size n:
-  Batch size: <# of times each dataset size was run>
+  Batch size: 5
   n=1       time: 1438675nanoseconds
-  n=10      time: 5164602nanoseconds
+  n=10      time: 2164602nanoseconds
   n=100     time: 3943333nanoseconds
   ...
   n=1,000,000  time: 3536034947nanoseconds
