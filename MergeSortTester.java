@@ -33,13 +33,13 @@ public class MergeSortTester
 
     //Generates a random array of n length with a range of values from 0 to ran
     public static int[] GenArr(int n, int ran){
-  int[] retArr =  new int[n];
-  for(int x = 0; x < retArr.length; x++){
-      retArr[x] = (int)(Math.random() * ran);
-  }
-  return retArr;
+	int[] retArr =  new int[n];
+	for(int x = 0; x < retArr.length; x++){
+	    retArr[x] = (int)(Math.random() * ran);
+	}
+	return retArr;
     }
-
+    
     //Helper method for displaying an array
     //Credit goes to Mr.Brown's skeleton file
     public static void printArray( int[] a ) {
@@ -61,6 +61,7 @@ public class MergeSortTester
 	    Tester.mess(a);
 	}
 	long avg = total / (long)5.0;
+	//For some reason, the first test we do is fudged up by something we haven't yet figured out. This boolean check lets us disregard the first test
 	if (first){
 	}
 	else{
